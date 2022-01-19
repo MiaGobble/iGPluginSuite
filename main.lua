@@ -117,7 +117,7 @@ function Suite:Load(Plugin)
 	
 	UIHandler:Init(Suite.PrimaryWidget)
 	
-	warn("iG suite loaded!")
+	warn("iG suite loaded! Please DM @iGottic on the DevForum or Roblox if issues occur!")
 end
 
 return Suite
