@@ -28,6 +28,8 @@ local UIHandler = {} do
 	
 	function UIHandler:SetTheme(...)
 		Theme = ...
+
+		Objects.Background.BackgroundColor3 = Theme.Background
 	end
 
 	function UIHandler:GetTheme()
@@ -62,6 +64,21 @@ local UIHandler = {} do
 			Size = UDim2.new(1, 0, 1, 0),
 			BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 			Parent = Window
+		})
+
+		self:NewObject("TextLabel", {
+			Name = "TitleLabel",
+			Size = UDim2.new(1, 0, 0.1, 0),
+			BackgroundTransparency = 1,
+			Text = "iG Studios",
+			TextScaled = true,
+			Font = Enum.Font.GothamBlack,
+		})
+
+		self:NewObject("ScrollingFrame", {
+			Position = UDim2.new(0, 0, 0.1, 0),
+			Size = UDim2.new(1, 0, 0.9, 0),
+			BackgroundTransparency = 1,
 		})
 	end
 end
